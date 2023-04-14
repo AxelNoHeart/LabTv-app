@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+html {
+    background: linear-gradient(to bottom, #75171f, #000000) fixed;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-toolbar a{
+    text-decoration: none;
+}
+mat-toolbar img{
+    max-width: 40px;
+    margin-left: 5em;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}

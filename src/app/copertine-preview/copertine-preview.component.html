@@ -1,0 +1,15 @@
+<div *ngIf="film">
+    <div>
+        <div>{{film.original_title}}</div>
+        <div>{{film.id}}</div>
+    </div>
+
+    <div>
+        <p>
+            {{film.overview}}
+        </p>
+    </div>
+    <div>
+        <a routerLink="/films/{{film.id}}" mat-button>DETTAGLI</a>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<button type="button" mat-button (click)="getFilms()">Ricarica</button>
+<div style="display: flex; flex-wrap: wrap; gap: 1em;" *ngIf="!loading">
+    <app-copertine-preview *ngFor="let f of films" [film]="f"></app-copertine-preview>
+</div>
+<mat-progress-spinner color="primary" mode="indeterminate" value="50" *ngIf="loading">
+</mat-progress-spinner>
