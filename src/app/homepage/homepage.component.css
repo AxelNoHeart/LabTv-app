@@ -1,0 +1,155 @@
+h1 {
+    margin: 2em 0 1em;
+}
+
+h1, h2{
+    color: rgb(255, 255, 255);
+}
+
+div h3{
+    color: #fff;
+}
+
+.card:hover img {
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, black 75%);
+     mask-image: linear-gradient(to left, transparent 0%, black 75%);
+}
+.card img{
+    transition: 2s;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card{
+    transition: .2s;
+    background-color: #000000c2;
+}
+
+.wrapper .card {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+.wrapper .card h4 {
+    text-shadow: 2px 2px #000;
+    color: #cdcdcd;
+}
+
+.wrapper .card .btn {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: .5s;
+}
+
+.wrapper .card .btn:hover {
+    border: 1px solid #fff;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 300px;
+    margin-top: 15vh;
+    position: relative;
+}
+
+footer #social {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+footer #social img{
+    transition: .2s;
+}
+footer #social img:hover{
+    transform: scale(1.1);
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+footer #social img {
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+.links li a{
+    color: white;
+}
+
+footer li {
+    text-align: center;
+    list-style: none;
+}
+
+footer a {
+    font-size: smaller;
+}
+
+footer p {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    color: rgb(128, 128, 128);
+}
+
+@media screen and (max-width: 1024px) {
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+    footer{
+        height: 400px;  
+    }
+
+    footer small{
+       margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card h2 {
+        font-size: 2em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+    footer{
+        height: 400px;  
+    }
+
+    footer small{
+       margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 536px) {
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+    footer{
+        height: 400px;  
+    }
+
+    footer small{
+       margin-bottom: 20px;
+    }
+}
+

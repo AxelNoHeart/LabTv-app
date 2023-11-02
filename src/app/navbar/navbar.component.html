@@ -1,7 +1,13 @@
-<mat-toolbar>
+<mat-toolbar [ngClass]="scrolled ? 'scrolled' : ''">
+
     <a href=""><img src="../../assets/img/logo.png" alt=""></a>
     <a mat-button routerLink="/homepage"><mat-icon>home</mat-icon>Home</a>
+    <a mat-button routerLink="/cerca"><mat-icon>search</mat-icon>Cerca</a>
     <a mat-button routerLink="/films"><mat-icon>movie</mat-icon>Films</a>
-    <a mat-button routerLink="/registrazione"><mat-icon>app_registration</mat-icon>Registrazione</a>
-    <a mat-button routerLink="/login"><mat-icon>login</mat-icon>Entra</a>
+    <a mat-button routerLink="/serie-tv"><mat-icon>tv</mat-icon>Serie Tv</a> 
+    <button mat-button [matMenuTriggerFor]="menu" id="menu"><mat-icon>person</mat-icon>Profilo</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['/acquistati']"><mat-icon>shopping_cart</mat-icon>Film Noleggiati</button>
+            <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
+        </mat-menu>
 </mat-toolbar>

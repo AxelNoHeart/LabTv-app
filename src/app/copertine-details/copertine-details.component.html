@@ -1,1 +1,73 @@
-<p>copertine-details works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+  <mat-card *ngIf="film">
+    <div class="twelve">
+      <h1 id="titolo" class="mt-2">{{ film.original_title }}</h1>
+    </div>
+    <img mat-card-image src="{{ linkImg + film.backdrop_path }}" />
+
+    <article class="row ms-3">
+      <section class="col-12 col-lg-6">
+        <div *ngIf="film?.overview != ''" id="sinossi">
+          <h3>Trama</h3>
+          <p>{{ film?.overview }}</p>
+        </div>
+
+        <div id="bottoni">
+          <div id="play">
+            <button class="fa-solid fa-play btn btn-outline-danger">
+              Riproduci
+            </button>
+          </div>
+
+          <div id="acquista">
+            <button
+              *ngIf="!acquistato"
+              (click)="compra()"
+              class="btn btn-outline-warning"
+            >
+              Noleggia <span><i class="fa-solid fa-cart-shopping"></i></span>
+            </button>
+            <button
+              *ngIf="acquistato"
+              (click)="restituisci()"
+              class="btn btn-outline-warning"
+            >
+              Restituisci
+            </button>
+          </div>
+        </div>
+
+        <div id="data">
+          <h5 class="data">
+            Data: <small>{{ film?.release_date | date : "dd/MM/YYYY" }}</small>
+          </h5>
+        </div>
+
+        <div id="generi">
+          <h5>Genere:</h5>
+          <span *ngFor="let genere of film?.genres"
+            >{{ genere.name }}&nbsp;&nbsp;</span
+          >
+        </div>
+
+      </section>
+      <aside class="col-12 col-lg-6 containero" id="tastoTrailer">
+        <iframe
+          class="responsive-iframe"
+          [src]="
+            'https://www.youtube.com/embed/' +
+              video?.key +
+              '?controls=1&enablejsapi=1&rel=0&autoplay=0' | safe
+          "
+          allowfullscreen
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          frameborder="0"
+        ></iframe>
+      </aside>
+    </article>
+  </mat-card>
+  <div *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <mat-card *ngIf="tv">
+    <div class="twelve">
+      <h1 id="titolo" class="mt-2">{{ tv.original_name }}</h1>
+    </div>
+    <img
+      mat-card-image
+      src="{{ linkImg + tv.backdrop_path }}"
+      alt="{{ tv.original_title }}"
+    />
+    <article class="row ms-3">
+      <section class="col-12 col-lg-6">
+        <div *ngIf="tv?.overview != ''" id="sinossi">
+          <h3>Trama</h3>
+          <p>{{ tv?.overview }}</p>
+        </div>
+
+        <div id="play">
+          <button class="fa-solid fa-play btn btn-outline-danger">
+            Riproduci
+          </button>
+        </div>
+
+        <div id="data">
+          <h5 class="data">
+            Data: <small>{{ tv?.first_air_date | date : "dd/MM/YYYY" }}</small>
+          </h5>
+        </div>
+
+        <div id="generi">
+          <h5>Genere:</h5>
+          <span *ngFor="let genere of tv?.genres"
+            >{{ genere.name }}&nbsp;&nbsp;</span
+          >
+        </div>
+      </section>
+      <aside class="col-12 col-lg-6" id="trailer">
+          <iframe
+            class="responsive-iframe"
+            [src]="
+              'https://www.youtube.com/embed/' +
+                video?.key +
+                '?controls=1&enablejsapi=1&rel=0&autoplay=0' | safe
+            "
+            allowfullscreen
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            frameborder="0"
+          ></iframe>
+      </aside>
+    </article>
+
+    <aside id="stagioni" class="ms-3">
+      <select class="form-select">
+        <option selected>Stagioni</option>
+        <option *ngFor="let stagione of tv?.seasons" id="stagione">
+          {{ stagione.name }} ({{ stagione.episode_count }})
+        </option>
+      </select>
+    </aside>
+  </mat-card>
+</div>

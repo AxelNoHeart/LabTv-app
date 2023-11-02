@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div style="display: flex; flex-wrap: wrap; gap: 1em;" infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="500" 
+    [scrollWindow]="true"
+    (scrolled)="onScroll()">
+        <app-copertine-preview-tv *ngFor="let s of serieTv" [tv]="s" ></app-copertine-preview-tv>
+    </div>
+
+    <mat-progress-spinner color="primary" mode="indeterminate" value="50">
+    </mat-progress-spinner>
+</div>

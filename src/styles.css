@@ -1,16 +1,16 @@
 *{
     box-sizing: border-box;
 }
-body{
-  margin: 0;
-  padding: 0;
+html, body {
+    min-height: 100%;
 }
-html {
-    background: linear-gradient(to bottom, #75171f, #000000) fixed;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #75171f, #000000) fixed;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 mat-toolbar a{
     text-decoration: none;
 }

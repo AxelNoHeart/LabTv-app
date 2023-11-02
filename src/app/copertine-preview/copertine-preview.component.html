@@ -1,15 +1,7 @@
-<div *ngIf="film">
-    <div>
-        <div>{{film.original_title}}</div>
-        <div>{{film.id}}</div>
-    </div>
-
-    <div>
-        <p>
-            {{film.overview}}
-        </p>
-    </div>
-    <div>
-        <a routerLink="/films/{{film.id}}" mat-button>DETTAGLI</a>
-    </div>
-</div>
+<mat-card *ngIf="film" class="film-card" routerLink="/films/{{film.id}}">
+    <mat-card-header>
+        <mat-card-title>{{film.original_title}}</mat-card-title>
+        <mat-card-subtitle>Data di rilascio: {{film.release_date}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{linkImg + film.poster_path}}"  alt="{{film.original_title}}">
+</mat-card>

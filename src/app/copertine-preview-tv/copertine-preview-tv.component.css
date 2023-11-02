@@ -1,0 +1,54 @@
+mat-card:hover {
+  transform: scale(1.1);
+  height: auto;
+  border-radius: 10px;
+  z-index: 50;
+  background-color: black;
+  color: white;
+}
+
+mat-card:hover img {
+  
+  mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+mat-card {
+  transition: 0.2s;
+  cursor: pointer;
+  max-width: 300px;
+  background-color: transparent;
+}
+mat-card-header{
+  display: none;
+}
+mat-card img {
+  width: 240px;
+  border-radius: 10px;
+  height: 360px;
+}
+
+mat-card-content{
+    display: none;
+    padding: 0 10px;
+    font-weight: 500;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Kreon', serif;
+    text-shadow: 3px 3px black;
+    color: white;
+    font-size: large;
+  }
+  mat-card:hover mat-card-content{
+    display: block;
+  }

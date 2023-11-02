@@ -1,5 +1,26 @@
 {
-    "users": [],
-    "posts": []
-   }
-   
+  "users": [
+    {
+      "email": "alessandro.hafez@outlook.it",
+      "password": "$2a$10$D4FywKsuQwsQOKPuHCoUpeOhPyIsdcjOiGwt70rL/JJMvIMfaBUki",
+      "nome": "Alessandro",
+      "password2": "was-validated",
+      "id": 1
+    },
+    {
+      "email": "ale20@gmail.com",
+      "password": "$2a$10$Lkdx7nxDLyH16PnDHbEYM.aJek52ZzUekvbKDuWlMJE.qm3dW2WdO",
+      "nome": "Alessandro",
+      "password2": "was-validated",
+      "id": 2
+    },
+    {
+      "email": "canegrande@gmail.com",
+      "password": "$2a$10$sZ2XX4i4a0RL2TxqyuLdh.Pe.XpbNp40BeqlBOLNYcSUKB0r6MJke",
+      "nome": "Alessandro",
+      "password2": "was-validated",
+      "id": 3
+    }
+  ],
+  "film-acquistati": []
+}

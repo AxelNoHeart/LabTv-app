@@ -1,0 +1,7 @@
+<mat-card *ngIf="tv" class="film-card" routerLink="/serie-tv/{{tv.id}}">
+    <mat-card-header>
+        <mat-card-title>{{tv.original_name}}</mat-card-title>
+        <mat-card-subtitle>Data di rilascio: {{tv.first_air_date}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{linkImg + tv.poster_path}}"  alt="{{tv.original_name}}">
+</mat-card>

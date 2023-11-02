@@ -1,1 +1,106 @@
-<p>homepage works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+
+<main>
+
+    <h1 class="text-center display-3">HOMEPAGE</h1>
+
+    <h2 class="ms-4">Serie Tv</h2>
+
+    <div class="wrapper">
+
+    <div class="card mb-3 mt-5 " style="max-width: 600px;" *ngIf = "topRatedCoverTv?.poster_path" (click) = "vaiASezioneTv('top_rated')">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img [src]="'https://www.themoviedb.org/t/p/original/' + topRatedCoverTv.poster_path" class="img-fluid rounded">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title display-5">I più votati</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card mb-3 mt-5 " style="max-width: 600px;" *ngIf = "popularsCover?.poster_path" (click) = "vaiASezioneTv('popular')">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img [src]="'https://www.themoviedb.org/t/p/original/' + popularsCover.poster_path" class="img-fluid rounded">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title display-5">Popolari</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <h2 class="ms-4 mt-5">Film</h2>
+
+    <div class="wrapper">
+
+
+    <div class="card mb-3 mt-5" style="max-width: 600px;" *ngIf = "topRatedMoviesCover?.poster_path" (click) = "vaiASezioneFilm( 'top_rated')">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img [src]="'https://www.themoviedb.org/t/p/original/' + topRatedMoviesCover.poster_path" class="img-fluid rounded">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h3 class="card-title display-5">I più votati</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card mb-3 mt-5" style="max-width: 600px;" *ngIf = "popularMoviesCover?.poster_path" (click) = "vaiASezioneFilm( 'popular')">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img [src]="'https://www.themoviedb.org/t/p/original/' + popularMoviesCover.poster_path" class="img-fluid rounded">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h3 class="card-title display-5">I più popolari</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="mt-5">
+
+    <ul id="social">
+        <li><img src="../../assets/img/icons8-facebook-100.png" alt="facebook"></li>
+        <li><img src="../../assets/img/icons8-instagram-100.png" alt="instagram"></li>
+        <li><img src="../../assets/img/icons8-twitter-100.png" alt="twitter"></li>
+        <li><img src="../../assets/img/icons8-riproduci-youtube-100.png" alt="youtube"></li>
+    </ul>
+
+    <div class="links">
+         <ul>
+        <li><a href="javascript:void(0)">Centro Assistenza</a></li>
+        <li><a href="javascript:void(0)">Note Legali</a></li>
+        <li><a href="javascript:void(0)">Condizioni Di Utilizzo</a></li>
+    </ul>
+
+    <ul>
+        <li><a href="javascript:void(0)">Privacy</a></li>
+        <li><a href="javascript:void(0)">Preferenze Per I Cookie</a></li>
+        <li><a href="#" id="contattaci">CONTATTACI</a></li>
+    </ul>
+    </div>
+   
+
+   
+    <p><small>&copy; Copyright 2023, Alessandro Hafez</small></p>
+   
+
+</footer>
+
+
+
+
+</div>

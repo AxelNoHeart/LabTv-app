@@ -1,0 +1,34 @@
+div.d-flex img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+  }
+div img{
+  min-height: 250px;
+}
+
+.card{
+  cursor: pointer;
+  background-color: #000000c2;
+  transition: 0.2s;
+  color: white;
+}
+.card-title{
+  font-size: 25px;
+}
+.card:hover{
+  transform: scale(1.08);
+  z-index: 50;
+}
+  div.d-flex {
+      width: 95%;
+      margin: 0 auto;
+      padding: 1em;
+  }
+
+  h1 {
+    margin: 1.7em 0;
+    color: white;
+  }
+
+

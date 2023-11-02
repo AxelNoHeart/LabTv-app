@@ -1,0 +1,7 @@
+div{
+    margin-top: 100px;
+}
+mat-progress-spinner{
+    position: absolute;
+    left: 45%;
+}
